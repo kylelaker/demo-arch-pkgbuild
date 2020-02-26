@@ -2,7 +2,11 @@ variable "ami_id" {
     default = "ami-074508ad6e83609f9"
 }
 
-variable "vpc_id" {
+variable "r53_profile_name" {
+    type = string
+}
+
+variable "ec2_profile_name" {
     type = string
 }
 
@@ -18,6 +22,15 @@ variable "domain" {
     type = string
 }
 
-variable "key_name" {
+variable "pubkey_file" {
     type = string
+}
+
+variable "userdata_file" {
+    type = string
+}
+
+variable "instance_type" {
+    type = string
+    default = "t3.micro"
 }
