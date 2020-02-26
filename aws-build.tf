@@ -1,19 +1,16 @@
 provider "aws" {
-  # us-east-1 (Northern Virginia) is the only supported region currently
   region  = var.aws_region
   profile = var.r53_profile_name
 }
 
 provider "aws" {
   alias = "r53"
-  # us-east-1 (Northern Virginia) is the only supported region currently
   region  = var.aws_region
   profile = var.r53_profile_name
 }
 
 provider "aws" {
   alias = "ec2"
-  # us-east-1 (Northern Virginia) is the only supported region currently
   region  = var.aws_region
   profile = var.ec2_profile_name
 }
